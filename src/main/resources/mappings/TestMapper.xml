@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TestMapper">
+
+    <select id="read" resultType="com.entity.People">
+        select * from people limit 1
+    </select>
+
+    <select id="write" resultType="com.entity.People">
+        select * from people limit 1
+    </select>
+
+    <insert id="testTransaction" parameterType="com.entity.People">
+        INSERT INTO `people` (`name`) VALUES ('小花_master');
+    </insert>
+</mapper>

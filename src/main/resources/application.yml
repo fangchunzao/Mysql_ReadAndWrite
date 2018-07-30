@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+
+
+mybatis:
+  mapperLocations: classpath:/com/fei/springboot/dao/*.xml
+  typeAliasesPackage: com.fei.springboot.dao
+  mapperScanPackage: com.fei.springboot.dao
+  configLocation: classpath:/mybatis-config.xml
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test_master?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    readSize: 2
+
+  read1:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test_read1?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+  read2:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test_read2?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
